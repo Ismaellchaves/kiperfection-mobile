@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiperfection - Acelere seu negócio</title>
+
+  <!-- Importação do TailwindCSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Importação do AOS (Animate On Scroll) para animações -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Fontes e outras configurações -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #1a1a1a; /* Preto */
+      color: white;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Estilo do Scroll */
+    *::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    .neon-purple {
+      color: #A500FF; /* Roxo Neon */
+    }
+
+    /* Animação da luz passando de direita para esquerda */
+    @keyframes lightAnimation {
+      0% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: -100% 50%;
+      }
+    }
+
+    /* Efeito de texto com luz neon */
+    .light-effect {
+      position: relative;
+      background: linear-gradient(90deg, #ff0000, #00ffff, #ff0000);
+      background-size: 200% 100%;
+      background-position: 100% 50%;
+      color: transparent;
+      -webkit-background-clip: text;
+      animation: lightAnimation 2s linear infinite;
+    }
+
+    /* Seção de empresas confiáveis - centralizada */
+    .companies-section {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .companies-section img {
+      max-width: 200px;
+      max-height: 100px;
+      transition: transform 0.3s ease;
+    }
+
+    .companies-section img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Seção "Por que escolher a Kiperfection" */
+    .why-choose-section {
+      margin-top: 4rem;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .why-choose-section h2 {
+      font-size: 2rem;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .why-choose-section p {
+      text-align: center;
+      color: #ddd;
+    }
+
+    /* Ajuste de layout para as seções */
+    .grid-cols-3 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Botão de contato */
+    .btn-contact {
+      background-color: #1b1b1b;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background-color: #7c3aed;
+      transform: translateY(-4px);
+    }
+
+    /* Efeito de sombra nos cards de texto */
+    .card-text {
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .card-text:hover {
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px);
+    }
+
+    /* Seção de estatísticas */
+    .statistics-section {
+      background-color: #111;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .statistics-section h2 {
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 2rem;
+    }
+
+    /* Seção de Empresas Parceiras */
+    .partners-section img {
+      transition: transform 0.3s ease;
+    }
+
+    .partners-section img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Main Section -->
+  <main>
+    <!-- Seção de Background -->
+    <img src="background-home.png" class="absolute object-cover w-full h-[950px] z-[-10]" alt="Background">
+
+<!-- Seção de Introdução -->
+<section class="flex items-center justify-center flex-col h-screen text-center p-8">
+    <span class="text-neon-green font-semibold text-xl">👋 Seja Bem-vindo</span>
+    <h1 class="text-6xl font-extrabold mt-4 light-effect">Acelere o desenvolvimento do seu negócio com a KIPERFECTION</h1>
+    <p class="text-gray-400 text-lg mt-6 mx-auto max-w-2xl">Escale seu projeto com profissionais de alto nível, aumentando qualidade e velocidade.</p>
+    <button onclick="window.location.href='https://wa.me/5588993799572'" class="mt-8 btn-contact flex items-center justify-center">
+      ENTRE EM CONTATO
+      <span class="ml-3 bg-purple-700 p-2 rounded-full">
+      </span>
+    </button>
+  </section>
+  
+  <!-- Seção da imagem thumbnail ocupando toda a tela -->
+  <section class="flex justify-center mt-8">
+    <img src="thumbnail-home.png" alt="Thumbnail Home" class="w-full h-auto object-cover">
+  </section>
+  
+
+    <!-- Seção: Por que escolher a Kiperfection -->
+    <section class="why-choose-section py-16 bg-black-700 mt-56"> <!-- Aumentando o mt para 56 para descer mais -->
+      <h2 class="text-center text-4xl font-extrabold text-neon-purple">Por que escolher a Kiperfection?</h2>
+      <p class="text-center text-gray-300 mt-4 max-w-2xl mx-auto">Nós capturamos a essência de cada momento, criando experiências que irão escalar seu negócio com agilidade e inovação.</p>
+    </section>
+
+ <!-- Seção: Por que escolher a Kiperfection -->
+ 
+   
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-12">
+      <div class="text-center card-text" data-aos="fade-up">
+        <h3 class="text-xl font-bold text-white">🎥 Produção Visual</h3>
+        <p class="text-gray-400 mt-2">Capturamos cada momento com perfeição, criando vídeos e fotos que destacam sua marca.</p>
+      </div>
+      <div class="text-center card-text" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold text-white">🌐 Design Gráfico</h3>
+        <p class="text-gray-400 mt-2">Criamos designs modernos e impactantes que fortalecem a identidade visual do seu negócio.</p>
+      </div>
+      <div class="text-center card-text" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-bold text-white">🚀 Inovação e Agilidade</h3>
+        <p class="text-gray-400 mt-2">Com ferramentas de última geração, entregamos soluções rápidas e eficientes.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mt-16">
+      <!-- Nossa Visão -->
+      <div class="text-center card-text" data-aos="fade-up">
+        <h3 class="font-bold text-xl text-white">🌟 Nossa Visão</h3>
+        <p class="text-gray-400 mt-2">Acreditamos que cada imagem tem o poder de contar uma história única. A Kiperfection visa transformar seus projetos em narrativas visuais inesquecíveis, seja para empresas ou momentos pessoais.</p>
+      </div>
+      
+      <!-- Tecnologia de Ponta -->
+      <div class="text-center card-text" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="font-bold text-xl text-white">💻 Tecnologia de Ponta</h3>
+        <p class="text-gray-400 mt-2">Usamos as melhores tecnologias para garantir a entrega de um trabalho impecável, sempre com inovação.</p>
+      </div>
+      
+      <!-- Equipe Qualificada -->
+      <div class="text-center card-text" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="font-bold text-xl text-white">👩‍💼 Equipe Qualificada</h3>
+        <p class="text-gray-400 mt-2">Contamos com uma equipe altamente qualificada e criativa, pronta para atender às suas necessidades com excelência.</p>
+      </div>
+    </div>
+  </section>
+  
+<!-- Seção de Estatísticas -->
+<section class="statistics-section">
+    <h2 class="text-5xl font-extrabold text-neon-green mb-8" data-aos="fade-down">🚀 Impulsionamos Milhares de Empresas!</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-gray-800 p-6 rounded-lg text-center shadow-lg transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in">
+        <h3 class="text-5xl font-bold text-purple-400">1 Milhão+</h3>
+        <p class="text-gray-300 mt-4">Requests processados por hora, garantindo eficiência e confiabilidade.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg text-center shadow-lg transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="100">
+        <h3 class="text-5xl font-bold text-blue-400">2 Mil+</h3>
+        <p class="text-gray-300 mt-4">Empresas transformadas com nossas soluções inovadoras.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg text-center shadow-lg transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="200">
+        <h3 class="text-5xl font-bold text-green-400">2 Anos</h3>
+        <p class="text-gray-300 mt-4">De experiência ajudando negócios a crescerem globalmente.</p>
+      </div>
+    </div>
+  </section>
+  
+<!-- Seção de Empresas Parceiras -->
+<section class="text-center py-16">
+    <h2 class="text-4xl font-extrabold text-neon-purple mb-8">Empresas Parceiras</h2>
+    <div class="companies-section flex justify-center space-x-8">
+        <a href="https://www.instagram.com/kiperfectionn/" class="logo-container text-white" data-aos="fade-up">
+            <img src="Acaivita.png" alt="Logo 1" class="company-logo">
+        </a>
+        <a href="https://www.instagram.com/kiperfectionn/" class="logo-container text-white" data-aos="fade-up">
+            <img src="Agron.png" alt="Logo 2" class="company-logo">
+        </a>
+        <a href="https://www.instagram.com/kiperfectionn/" class="logo-container text-white" data-aos="fade-up">
+            <img src="IK.png" alt="Logo 3" class="company-logo">
+        </a>
+        <a href="https://www.instagram.com/kiperfectionn/" class="logo-container text-white" data-aos="fade-up">
+            <img src="ISTEC.png" alt="Logo 4" class="company-logo">
+        </a>
+        <a href="https://www.instagram.com/kiperfectionn/"class="logo-container text-white" data-aos="fade-up">
+            <img src="Perfumaria.png" alt="Logo 5" class="company-logo">
+        </a>
+        <a href="https://www.instagram.com/kiperfectionn/"class="logo-container text-white" data-aos="fade-up">
+            <img src="TrihexStudios.png" alt="Logo 6" class="company-logo">
+        </a>
+        <a href="https://www.instagram.com/kiperfectionn/" class="logo-container text-white" data-aos="fade-up">
+            <img src="DEVXPRESS.png" alt="Logo 7" class="company-logo">
+        </a>
+    </div>
+</section>
+
+<!-- Estilos CSS -->
+<style>
+    .logo-container {
+        display: inline-block;
+        padding: 8px;
+        border-radius: 12px;
+        border: 3px solid transparent;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .logo-container:hover {
+        border-color: #ff0000; /* Borda colorida (tom de vermelho) */
+        animation: pulse 1.5s infinite; /* Efeito de animação de pulsação */
+    }
+
+    .company-logo {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Efeito de pulsação */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<!-- Script de animações do AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
